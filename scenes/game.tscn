@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://cvf06jgyintpi" path="res://assets/brackeys_platformer_assets/sprites/world_tileset.png" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://dcwlrkats3qac" path="res://scenes/player.tscn" id="1_yqjtg"]
-[ext_resource type="PackedScene" uid="uid://dl3acqxfv4aqb" path="res://scenes/mouse_NPC.tscn" id="2_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://d22thxaxqk77i" path="res://scenes/fly_enemy.tscn" id="2_p57ef"]
 [ext_resource type="PackedScene" uid="uid://dwih6dqjwj1p6" path="res://scenes/cockroach_enemy.tscn" id="3_gee14"]
 [ext_resource type="PackedScene" uid="uid://brnium8i7tff" path="res://scenes/cheese.tscn" id="3_iywne"]
@@ -352,9 +351,6 @@ position = Vector2(0, -40)
 zoom = Vector2(3.5, 3.5)
 limit_left = -200
 limit_right = 200
-
-[node name="Mouse NPC" parent="." unique_id=331682177 instance=ExtResource("2_0tnpc")]
-position = Vector2(84, 23)
 
 [node name="Goldfish" parent="." unique_id=283769330 instance=ExtResource("3_u5sy4")]
 z_index = 1
