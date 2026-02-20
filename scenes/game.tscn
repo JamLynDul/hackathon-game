@@ -351,6 +351,7 @@ position = Vector2(0, -40)
 zoom = Vector2(3.5, 3.5)
 limit_left = -200
 limit_right = 200
+limit_bottom = 80
 
 [node name="Goldfish" parent="." unique_id=283769330 instance=ExtResource("3_u5sy4")]
 z_index = 1

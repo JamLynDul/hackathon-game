@@ -1,10 +1,21 @@
+class_name Player
 extends CharacterBody2D
-
 
 const SPEED = 200.0
 const JUMP_VELOCITY = -400.0
 
 @onready var animated_sprite_2d = $AnimatedSprite2D
+
+func death():
+	print("ow!")
+	await get_tree().create_timer(0.5).timeout
+	respawn()
+
+# Respawn function.
+func respawn():
+	self.global_position = Vector2(0,25)
+	get_node("CollisionShape2D").set_deferred("disabled", false)
+	Engine.time_scale = 1.0
 
 func _physics_process(delta):
 	# Add the gravity.
