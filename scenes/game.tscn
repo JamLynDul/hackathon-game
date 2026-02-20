@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cvf06jgyintpi" path="res://assets/brackeys_platformer_assets/sprites/world_tileset.png" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://dcwlrkats3qac" path="res://scenes/player.tscn" id="1_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://brnium8i7tff" path="res://scenes/cheese.tscn" id="3_iywne"]
 [ext_resource type="PackedScene" uid="uid://dxl3gas3752c8" path="res://scenes/left_boundary.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://b2sgtlwkaxrk1" path="res://scenes/right_boundary.tscn" id="4_lbhrr"]
 
@@ -303,12 +304,19 @@ sources/0 = SubResource("TileSetAtlasSource_lbhrr")
 
 [node name="Player Character" parent="." unique_id=104593806 instance=ExtResource("1_yqjtg")]
 z_index = 5
+position = Vector2(0, 19)
 
 [node name="Camera" type="Camera2D" parent="Player Character" unique_id=212718409]
 position = Vector2(0, -54)
 zoom = Vector2(3, 3)
 limit_left = -200
 limit_right = 200
+
+[node name="Cheese" type="Node" parent="." unique_id=714172992]
+
+[node name="cheeseOne" parent="Cheese" unique_id=944550330 instance=ExtResource("3_iywne")]
+z_index = 1
+position = Vector2(-72, 23)
 
 [node name="Map Tiles" type="Node" parent="." unique_id=1900692587]
 

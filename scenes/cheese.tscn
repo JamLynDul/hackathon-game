@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://brnium8i7tff"]
+
+[ext_resource type="Texture2D" uid="uid://sdvbrhk5d5p8" path="res://assets/cheeseSprite.png" id="1_6ih6m"]
+[ext_resource type="Script" uid="uid://cmuvb0ivd6cpv" path="res://scripts/cheese.gd" id="1_gv6i6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gv6i6"]
+atlas = ExtResource("1_6ih6m")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xi2t1"]
+atlas = ExtResource("1_6ih6m")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kvjqq"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_gv6i6")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_xi2t1")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vrcb1"]
+radius = 7.0
+
+[node name="Cheese" type="Area2D" unique_id=944550330]
+collision_mask = 2
+script = ExtResource("1_gv6i6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1402373916]
+sprite_frames = SubResource("SpriteFrames_kvjqq")
+animation = &"idle"
+autoplay = "idle"
+frame = 1
+frame_progress = 0.24878727
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1211013760]
+shape = SubResource("CircleShape2D_vrcb1")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
