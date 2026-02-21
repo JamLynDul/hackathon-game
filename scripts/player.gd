@@ -8,7 +8,6 @@ const JUMP_VELOCITY = -350.0
 @onready var animation_player = $AnimationPlayer
 
 func death():
-	print("ow!")
 	animation_player.play("death")
 	await get_tree().create_timer(0.5).timeout
 	
