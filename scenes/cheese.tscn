@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://sdvbrhk5d5p8" path="res://assets/cheeseSprite.png" id="1_6ih6m"]
 [ext_resource type="Script" uid="uid://cmuvb0ivd6cpv" path="res://scripts/cheese.gd" id="1_gv6i6"]
-[ext_resource type="AudioStream" uid="uid://bxdr244u211y7" path="res://assets/audio/sound effects/pickup.wav" id="3_xi2t1"]
+[ext_resource type="AudioStream" uid="uid://bnbdo2cx3ntg6" path="res://assets/audio/sound effects/crunch.wav" id="3_xi2t1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gv6i6"]
 atlas = ExtResource("1_6ih6m")
@@ -143,6 +143,7 @@ shape = SubResource("CircleShape2D_vrcb1")
 
 [node name="Pickup" type="AudioStreamPlayer" parent="." unique_id=725839798]
 stream = ExtResource("3_xi2t1")
+volume_db = 24.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1282585637]
 libraries/ = SubResource("AnimationLibrary_rctj2")

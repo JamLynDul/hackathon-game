@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://w08yydlftfns"
+path="res://.godot/imported/Mose die.mp3-08541347fba502fd8374e76e89cc81b0.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/sound effects/Mose die.mp3"
+dest_files=["res://.godot/imported/Mose die.mp3-08541347fba502fd8374e76e89cc81b0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

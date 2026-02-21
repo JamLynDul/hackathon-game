@@ -9,8 +9,9 @@ const JUMP_VELOCITY = -350.0
 
 func death():
 	print("ow!")
-	await get_tree().create_timer(0.5).timeout
 	animation_player.play("death")
+	await get_tree().create_timer(0.5).timeout
+	
 
 # Respawn function.
 func respawn():
@@ -43,6 +44,7 @@ func _physics_process(delta):
 			animated_sprite_2d.play("run")
 	else:
 		animated_sprite_2d.play("jump_and_fall")
+		animation_player.play("jump sfx")
 		
 	# Determines the direction of the sprite.
 	if direction > 0:
