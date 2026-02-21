@@ -13,6 +13,23 @@
 [ext_resource type="Texture2D" uid="uid://cch4dreb0fyfv" path="res://assets/platformsOne.png" id="9_kvpfn"]
 [ext_resource type="Texture2D" uid="uid://487kyaslyw36" path="res://assets/backgroundObjectsOne.png" id="10_dinhu"]
 
+[sub_resource type="GDScript" id="GDScript_dinhu"]
+script/source = "extends Node2D
+
+# var cheese = 0
+
+# func cheese_collect():
+	# cheese += 1
+	
+# func all_cheese_collected():
+	# if cheese == 5:
+		# print(\"you're winner\")
+# create a variable that is counted up
+# every time a piece of cheese is collected
+# once this variable reaches a certain amount
+# cue either boss fight or win screen?
+"
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kvpfn"]
 size = Vector2(944, 31)
 
@@ -725,6 +742,7 @@ sources/2 = SubResource("TileSetAtlasSource_kvpfn")
 sources/3 = SubResource("TileSetAtlasSource_trtic")
 
 [node name="Game" type="Node2D" unique_id=486770811]
+script = SubResource("GDScript_dinhu")
 
 [node name="GameManager" type="Node" parent="." unique_id=1349806340]
 unique_name_in_owner = true
