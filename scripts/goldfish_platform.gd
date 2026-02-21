@@ -1,6 +1,6 @@
 extends AnimatableBody2D
 
-const SPEED = 60
+const SPEED = 80
 var direction = 1
 @onready var ray_cast_right: RayCast2D = $RayCastRight
 @onready var ray_cast_left: RayCast2D = $RayCastLeft

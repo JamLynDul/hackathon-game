@@ -2,7 +2,7 @@ class_name Player
 extends CharacterBody2D
 
 const SPEED = 130.0
-const JUMP_VELOCITY = -400.0
+const JUMP_VELOCITY = -350.0
 
 @onready var animated_sprite_2d = $AnimatedSprite2D
 
@@ -13,7 +13,7 @@ func death():
 
 # Respawn function.
 func respawn():
-	self.global_position = Vector2(0,25)
+	self.global_position = Vector2(145, 19)
 	get_node("CollisionShape2D").set_deferred("disabled", false)
 	Engine.time_scale = 1.0
 
